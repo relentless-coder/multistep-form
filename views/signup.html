@@ -34,6 +34,6 @@
       <div class="checkbox-wrap">
         <input type="checkbox" class="checkbox" name="condiiton" value="" required><p class="checkbox-text">I authorize RupaiyaExchange to share my details with other Financial Institutions for credit card check and faster processing of loan.</p>
       </div>
-      <a ui-sref='index.otp' ng-click="storeData" class="submit-signup">SIGNUP</a>
+      <a ui-sref='index.otp' ng-disabled="signForm.email.$invalid" class="submit-signup">SIGNUP</a>
 
     </div>
