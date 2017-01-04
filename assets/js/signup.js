@@ -35,9 +35,8 @@ app.config(function($stateProvider,$urlRouterProvider) {
   });
 });
 
-app.controller("FormCtrl", ["$scope", "$location", "$window", function($scope, $location, $window) {
-    $scope.newuser = {};
-
+app.controller("FormCtrl", ["$scope", "$location", "$window", "dataService", function($scope, $location, $window, dataService) {
+    $scope.newuser = dataService.newuser;
     if(document.getElementById('showPswd')) {
       document.getElementById('showPswd').addEventListener("click", function() {
           var pwd = document.getElementById("newPassword");
@@ -49,6 +48,7 @@ app.controller("FormCtrl", ["$scope", "$location", "$window", function($scope, $
       });
     }
     if(document.getElementById('last')) {
+      console.log(dataService.newuser.firstname);
           setTimeout(function() {
             $window.open('http://www.ayushdevelops.com/');
           }, 10000);
@@ -58,3 +58,9 @@ app.controller("FormCtrl", ["$scope", "$location", "$window", function($scope, $
       $location.path(path);
     };
 }]);
+
+app.factory('dataService', function() {
+  return {
+    newuser: {}
+  };
+});
