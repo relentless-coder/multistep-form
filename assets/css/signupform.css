@@ -19,6 +19,7 @@ body {
 .ng-invalid.ng-dirty {
   border-color: red;
 }
+
 /*Signup form styles*/
 
 #wrapper-signup {
@@ -105,7 +106,7 @@ label {
     border: 1px solid rgb(220, 220, 220);
 }
 
-span {
+.awesome-icon {
     width: 15%;
     max-width: 100%;
     float: left;
@@ -115,11 +116,7 @@ span {
     padding: 4.2% 4%;
 }
 
-.email-icon {
-    font-size: 1.3em;
-}
-
-.mobile-icon {
+.email-icon, .mobile-icon {
     font-size: 1.3em;
 }
 
@@ -358,10 +355,6 @@ label {
       padding: 3%;
       font-family: ubuntu;
 }
-
-/*Progress bar*/
-
-
 
 /*Animations using ngAnimate*/
 

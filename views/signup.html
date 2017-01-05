@@ -13,7 +13,7 @@
       <div class="element-wrap">
           <label for="email">EMAIL
             <div class="email-num-wrap">
-              <span><i class="fa fa-envelope-o fa-lg email-icon" aria-hidden="true"></i></span><input type="email" id="email" ng-model="newuser.email" name="email" value="" placeholder="Email ID" required>
+              <span class="awesome-icon"><i class="fa fa-envelope-o fa-lg email-icon" aria-hidden="true"></i></span><input type="email" id="email" ng-model="newuser.email" name="email" value="" placeholder="Email ID" required>
             </div>
             <p class="error" style="color: red; font-size: 0.8em;" ng-show="signForm.email.$invalid && signForm.email.$dirty">Enter a valid email</p>
           </label>
@@ -21,7 +21,7 @@
       <div class="element-wrap">
         <label>MOBILE NUMBER
           <div class="email-num-wrap">
-            <span><i class="fa fa-mobile fa-2x mobile-icon" aria-hidden="true"></i></span><input type="number" id="number" ng-model="newuser.number" name="mobile-number" value="" placeholder="Enter 10 digit number">
+            <span class="awesome-icon"><i class="fa fa-mobile fa-2x mobile-icon" aria-hidden="true"></i></span><input type="number" id="number" ng-model="newuser.number" name="mobile-number" value="" placeholder="Enter 10 digit number">
           </div>
         </label>
       </div>
@@ -29,11 +29,11 @@
         &nbsp;
       </div>
       <div class="checkbox-wrap">
-      <input type="checkbox" class="checkbox" name="terms" value="" required><p class="checkbox-text">I have read and agree to the <a href="#">Privacy Policy</a>, <a href="#">Terms of Use</a> and consent to Electronic Disclosures.</p>
+      <input type="checkbox" class="checkbox" name="terms" value="" ng-model="tcheck" required><p class="checkbox-text">I have read and agree to the <a href="#">Privacy Policy</a>, <a href="#">Terms of Use</a> and consent to Electronic Disclosures.</p>
       </div>
       <div class="checkbox-wrap">
-        <input type="checkbox" class="checkbox" name="condiiton" value="" required><p class="checkbox-text">I authorize RupaiyaExchange to share my details with other Financial Institutions for credit card check and faster processing of loan.</p>
+        <input type="checkbox" class="checkbox" name="condiiton" value="" ng-model="ccheck" required><p class="checkbox-text">I authorize RupaiyaExchange to share my details with other Financial Institutions for credit card check and faster processing of loan.</p>
       </div>
-      <a ui-sref='index.otp' ng-disabled="signForm.email.$invalid" class="submit-signup">SIGNUP</a>
+      <a ui-sref='index.otp' ng-show="signForm.email.$valid && tcheck && ccheck" class="submit-signup">SIGNUP</a>
 
     </div>
