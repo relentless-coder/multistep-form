@@ -1,6 +1,8 @@
 <div id="wrapper-otp">
     <p>Please enter your One Time Password</p>
-    <input type="text" name="otp" id="otp" value="" placeholder="Your OTP" required>
-    <a ui-sref='index.password'><button type="submit" class="verify" name="" value="">Verify</button></a>
+    <input type="text" name="otp" ng-model="otp" id="otp" value="" placeholder="Your OTP" required>
+    <a ui-sref='index.password'><button type="submit" class="verify" name="" value="" ng-hide="!otp">Verify</button></a>
+    <div class="clear">
+    </div>
     <p id="resend">Click <a href="#">here</a> to resend otp.</p>
 </div>

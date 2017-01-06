@@ -14,11 +14,6 @@ body {
     max-width: 100%;
 }
 
-/*Validation Styles*/
-
-.ng-invalid.ng-dirty {
-  border-color: red;
-}
 
 /*Signup form styles*/
 
@@ -26,11 +21,12 @@ body {
     max-width: 40%;
     margin: 5% auto;
     position: relative;
-    background-color: rgb(242, 242, 241);
+    background-color: rgb(248, 248, 248);
     border: 1px solid rgb(220, 220, 220);
+    box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
     padding: 3%;
-    font-family: ubuntu;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #wrapper-signup:after {
@@ -42,6 +38,7 @@ body {
 
 #wrapper-signup>h1 {
     margin: 0;
+    font-weight: lighter;
     padding: 0;
 }
 
@@ -49,6 +46,7 @@ body {
     border-bottom: 1px solid rgb(220, 220, 220);
     padding-bottom: 4%;
     margin-bottom: 0;
+    font-weight: bold;
 }
 
 .element-wrap {
@@ -74,14 +72,15 @@ label {
 
 #firstname, #lastname {
     width: 49%;
-    padding: 4% 2%;
-    font-size: 1.1em;
-    font-weight: bold;
+    padding: 3% 2%;
+    font-size: 1em;
     border: 1px solid rgb(220, 220, 220);
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #firstname:focus, #lastname:focus, #email:focus, #number:focus {
-    outline-color: rgb(28, 232, 91);
+    outline-color: rgb(28, 195, 91);
 }
 
 .name-wrap {
@@ -92,11 +91,12 @@ label {
 #email {
     width: 85%;
     max-width: 100%;
-    padding: 4% 2%;
+    padding: 3% 2%;
     float: right;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     border: none;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .email-num-wrap {
@@ -111,9 +111,9 @@ label {
     max-width: 100%;
     float: left;
     text-align: center;
-    background-color: rgb(210, 210, 210);
+    background-color: rgb(240, 240, 240);
     border: none;
-    padding: 4.2% 4%;
+    padding: 3.1% 2%;
 }
 
 .email-icon, .mobile-icon {
@@ -123,9 +123,10 @@ label {
 #number {
     width: 85%;
     max-width: 100%;
-    padding: 4% 2%;
+    padding: 3% 2%;
     float: right;
-    font-size: 1.1em;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     border: none;
 }
@@ -140,7 +141,8 @@ label {
 
 .checkbox-text {
     width: 90%;
-    font-size: 0.9em;
+    font-weight: bold;
+    font-size: 0.8em;
     margin-left: 7%;
     text-align: left;
     padding: none;
@@ -148,7 +150,7 @@ label {
 
 .checkbox-text>a {
     text-decoration: none;
-    color: rgb(28, 232, 91);
+    color: rgb(28, 195, 91);
 }
 
 .checkbox-wrap {
@@ -160,21 +162,13 @@ label {
     padding: 5%;
     text-decoration: none;
     color: white;
-    background-color: rgb(28, 202, 91);
+    background: rgb(28, 195, 91);
     color: white;
+    margin-top: 2%;
     font-size: 1.1em;
-    border: none;
+    border: 3px solid rgb(28, 150, 91);
     border-radius: 0.3em;
-    box-shadow: 1px 1px 5px 1px rgb(215, 215, 215), -1px -1px 5px 1px rgb(215, 215, 215);
     font-weight: bolder;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.submit-signup:hover {
-    -webkit-transform: rotate(360deg) scale(1.5);
-    transform: rotate(360deg) scale(1.5);
-    background-color: rgb(37, 64, 78);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -183,23 +177,29 @@ label {
 /*OTP html styles*/
 
 #wrapper-otp {
-    max-width: 40%;
+    max-width: 30%;
     margin: 5% auto;
     position: relative;
-    background-color: rgb(242, 242, 241);
+    background-color: rgb(250, 250, 250);
     border: 1px solid rgb(220, 220, 220);
+    box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
     padding: 2%;
-    font-family: ubuntu;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#wrapper-otp>p {
+    font-weight: bold;
 }
 
 #otp {
-    width: 50%;
-    padding: 4% 2%;
-    font-size: 1.1em;
+    width: 60%;
+    padding: 3% 2%;
+    font-size: 1em;
     font-weight: bold;
     margin-right: 2%;
     border: 1px solid rgb(220, 220, 220);
+    font-family: 'Quicksand', sans-serif;
 }
 
 #otp:focus {
@@ -207,36 +207,40 @@ label {
 }
 
 .verify {
-    padding: 4% 2%;
-    width: 30%;
-    background-color: rgb(28, 202, 91);
+    padding: 3% 2%;
+    width: 36%;
+    background: rgb(28, 195, 91);
+    border: 3px solid rgb(28, 150, 91);
     color: white;
-    font-size: 1.1em;
+    border-radius: 0.3em;
+    font-size: 1em;
     font-weight: bold;
-    border: none;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #resend {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    clear: both;
 }
 
 #resend a {
     text-decoration: none;
-    color: rgb(28, 232, 91);
+    color: rgb(28, 195, 91);
 }
 
 
 /*PASSWORD html styles*/
 
 #wrapper-password {
-    max-width: 60%;
+    max-width: 40%;
     margin: 5% auto;
     position: relative;
-    background-color: rgb(242, 242, 241);
+    background-color: rgb(250, 250, 250);
     border: 1px solid rgb(220, 220, 220);
+    box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
     padding: 2%;
-    font-family: ubuntu;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #wrapper-password:after {
@@ -249,13 +253,15 @@ label {
 .passWd {
     padding: 3% 2%;
     margin-top: 1%;
-    font-size: 1.1em;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
     border: 1px solid rgb(220, 220, 220);
     width: 50%;
 }
 
 .passWd:focus {
-    outline-color: rgb(28, 232, 91);
+    outline-color: rgb(28, 200, 91);
 }
 
 #showPswd {
@@ -266,11 +272,13 @@ label {
     padding: 3% 2%;
     width: 50%;
     margin-top: 2%;
-    background-color: rgb(28, 202, 91);
+    background: rgb(28, 195, 91);
+    border: 3px solid rgb(28, 150, 91);
     color: white;
-    font-size: 1.1em;
+    border-radius: 0.3em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
     font-weight: bold;
-    border: none;
 }
 
 .new {
@@ -295,26 +303,26 @@ label {
     max-width: 30%;
     margin: 5% auto;
     position: relative;
-    background-color: rgb(242, 242, 241);
+    background-color: rgb(248, 248, 248);
     border: 1px solid rgb(220, 220, 220);
     color: rgb(100, 100, 100);
     padding: 2%;
-    font-family: ubuntu;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
 }
 
 #wrapper-identity>p {
     margin-top: 0;
     padding-bottom: 7%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
     border-bottom: 1px solid rgb(220, 220, 220);
-}
-
-label {
-    font-size: 0.9em;
 }
 
 .aadhar-wrap {
     max-width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .pan-wrap {
@@ -327,34 +335,42 @@ label {
     margin-top: 2%;
     padding: 4% 2%;
     border: 1px solid rgb(220, 220, 220);
+    font-family: 'Quicksand', sans-serif;
     font-size: 1em;
+    font-weight: bold;
 }
 
 #aadharN:focus, #panN:focus {
-    outline-color: rgb(28, 232, 91);
+    outline-color: rgb(28, 195, 91);
 }
 
 #submit {
     padding: 3% 2%;
     width: 100%;
     margin-top: 5%;
-    background-color: rgb(28, 202, 91);
+    background: rgb(28, 195, 91);
+    border: 3px solid rgb(28, 150, 91);
+    border-radius: 0.3em;
     color: white;
     font-size: 1.1em;
+    font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    border: none;
 }
 
 #last {
-      max-width: 40%;
-      margin: 5% auto;
-      position: relative;
-      background-color: rgb(242, 242, 241);
-      border: 1px solid rgb(220, 220, 220);
-      color: rgb(100, 100, 100);
-      padding: 3%;
-      font-family: ubuntu;
+    max-width: 40%;
+    margin: 5% auto;
+    position: relative;
+    : white;
+    font-size: 1.1em;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(220, 220, 220);
+    color: rgb(100, 100, 100);
+    padding: 3%;
+    box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
+    font-family: 'Quicksand', sans-serif;
 }
+
 
 /*Animations using ngAnimate*/
 
@@ -379,46 +395,18 @@ label {
 @-webkit-keyframes enter {
     from {
         opacity: 0;
-        -webkit-transform: scale(0) rotate(-90deg);
-        transform: scale(0) rotate(-90deg);
-    }
-    25% {
-        opacity: 0.5;
-        -webkit-transform: scale(0.3) rotate(-45deg);
-        transform: scale(0.3) rotate(-45deg);
-    }
-    90% {
-        opacity: 1;
-        -webkit-transform: scale(1.2) rotate(0deg);
-        transform: scale(1.2) rotate(0deg);
     }
     to {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
     }
 }
 
 @keyframes enter {
     from {
         opacity: 0;
-        -webkit-transform: scale(0) rotate(-90deg);
-        transform: scale(0) rotate(-90deg);
-    }
-    25% {
-        opacity: 0.5;
-        -webkit-transform: scale(0.3) rotate(-45deg);
-        transform: scale(0.3) rotate(-45deg);
-    }
-    90% {
-        opacity: 1;
-        -webkit-transform: scale(1.2) rotate(0deg);
-        transform: scale(1.2) rotate(0deg);
     }
     to {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
     }
 }
 
@@ -428,20 +416,10 @@ label {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    10% {
-        opacity: 1;
-        -webkit-transform: scale(1.2) rotate(0deg);
-        transform: scale(1.2) rotate(0deg);
-    }
-    75% {
-        opacity: 0.5;
-        -webkit-transform: scale(0.3) rotate(45deg);
-        transform: scale(0.3) rotate(45deg);
-    }
     to {
         opacity: 0;
-        -webkit-transform: scale(0) rotate(90deg);
-        transform: scale(0) rotate(90deg);
+        -webkit-transform: scale(0);
+        transform: scale(0);
     }
 }
 
@@ -451,20 +429,10 @@ label {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-    10% {
-        opacity: 1;
-        -webkit-transform: scale(1.2) rotate(0deg);
-        transform: scale(1.2) rotate(0deg);
-    }
-    75% {
-        opacity: 0.5;
-        -webkit-transform: scale(0.3) rotate(45deg);
-        transform: scale(0.3) rotate(45deg);
-    }
     to {
         opacity: 0;
-        -webkit-transform: scale(0) rotate(90deg);
-        transform: scale(0) rotate(90deg);
+        -webkit-transform: scale(0);
+        transform: scale(0);
     }
 }
 
@@ -483,7 +451,6 @@ label {
     }
     #wrapper-password {
         max-width: 80%;
-        font-size: 12px;
     }
 }
 
@@ -500,15 +467,8 @@ label {
     #wrapper-signup, #last {
         max-width: 55%;
     }
-        .submit-signup:hover {
-            -webkit-transform: rotate(360deg) scale(1.3);
-            transform: rotate(360deg) scale(1.3);
-            background-color: rgb(37, 64, 78);
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
     #wrapper-identity {
-      max-width: 45%;
+        max-width: 45%;
     }
 }
 
@@ -516,16 +476,8 @@ label {
     #wrapper-signup, #last {
         max-width: 75%;
     }
-
-    .submit-signup:hover {
-        -webkit-transform: rotate(360deg) scale(1.2);
-        transform: rotate(360deg) scale(1.2);
-        background-color: rgb(37, 64, 78);
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
     #wrapper-identity {
-      max-width: 65%;
+        max-width: 65%;
     }
 }
 
@@ -533,14 +485,7 @@ label {
     #wrapper-signup, #last {
         max-width: 95%;
     }
-    .submit-signup:hover {
-        -webkit-transform: rotate(360deg) scale(1.1);
-        transform: rotate(360deg) scale(1.1);
-        background-color: rgb(37, 64, 78);
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
     #wrapper-identity {
-      max-width: 85%;
+        max-width: 85%;
     }
 }

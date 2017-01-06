@@ -1,12 +1,14 @@
 <div id="wrapper-identity">
     <p>Please enter the following details</p>
-        <div class="aadhar-wrap">
-            <label for="aadhar">Aadhar Card</label><br>
-            <input type="text" name="aadhar" ng-model="newuser.aadhar" id="aadharN" value="" placeholder="Enter Aadhar Card No" required>
-        </div>
-        <div class="pan-wrap">
-            <label for="pan">PAN</label><br>
-            <input type="text" name="pan" ng-model="newuser.pan" value="" id="panN" placeholder="Enter PAN No" required>
-        </div>
-        <input type="submit" ng-click="go('/index/done')" name="submit-info" value="Submit" id="submit">
+    <div class="aadhar-wrap">
+        <label for="aadhar">Aadhar Card</label><br>
+        <input type="text" name="aadhar" ng-model="newuser.aadhar" id="aadharN" value="" placeholder="Enter Aadhar Card No" required>
+        <p class="error" style="color: red; font-size: 0.7em; font-weight: bold; clear: both; margin-bottom: 0; padding-bottom: 0;" ng-show="signForm.aadhar.$dirty && !newuser.aadhar">Aadhar number required</p>
+    </div>
+    <div class="pan-wrap">
+        <label for="pan">PAN</label><br>
+        <input type="text" name="pan" ng-model="newuser.pan" value="" id="panN" placeholder="Enter PAN No" required>
+        <p class="error" style="color: red; font-size: 0.7em; font-weight: bold; clear: both; margin-bottom: 0; padding-bottom: 0;" ng-show="signForm.pan.$dirty && !newuser.pan">PAN number required</p>
+    </div>
+    <input type="submit" ng-show="newuser.aadhar && newuser.pan" ng-click="go('/index/done')" name="submit-info" value="Submit" id="submit">
 </div>
