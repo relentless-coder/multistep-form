@@ -22,7 +22,7 @@ body {
     margin: 5% auto;
     position: relative;
     background-color: rgb(248, 248, 248);
-    border: 1px solid rgb(220, 220, 220);
+    border: 2px solid rgb(220, 220, 220);
     box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
     padding: 3%;
@@ -53,82 +53,165 @@ body {
     padding-top: 7%;
     width: 100%;
     float: left;
-}
-
-label {
-    font-size: 0.8em;
-    clear: both;
-    font-weight: bold;
-    padding-bottom: 2%;
-}
-
-#firstname {
-    float: left;
-}
-
-#lastname {
-    float: right;
-}
-
-#firstname, #lastname {
-    width: 49%;
-    padding: 3% 2%;
-    font-size: 1em;
-    border: 1px solid rgb(220, 220, 220);
-    font-weight: bold;
-    font-family: 'Quicksand', sans-serif;
-}
-
-#firstname:focus, #lastname:focus, #email:focus, #number:focus {
-    outline-color: rgb(28, 195, 91);
+    position: relative;
 }
 
 .name-wrap {
-    float: left;
-    width: 100%;
+    display: inline-block;
+    width: 49%;
+    margin-top: 3%;
+    position: relative;
+}
+
+.name-wrap > label, .email-num-wrap > label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em;
+  transition: bottom 0.3s ease;
+}
+
+#firstname {
+  width: 100%;
+  max-width: 100%;
+  padding: 3%;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  border: 2px solid rgb(220, 220, 220);
+}
+
+#firstname:focus {
+  outline: none;
+  border: 2px solid rgb(28, 195, 91)
+}
+
+#firstname:focus + label {
+  bottom: 100%;
+  padding: 0.2em;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(28, 195, 91);
+}
+
+#firstname:valid + label {
+    bottom: 100%;
+    padding: 0.2em;
+      bottom: 100%;
+      padding: 0.2em;
+      font-weight: bold;
+}
+
+#firstname:focus {
+  outline: none;
+}
+
+#lastname {
+  width: 100%;
+  border: none;
+  max-width: 100%;
+  padding: 3%;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  border: 2px solid rgb(220, 220, 220);
+}
+
+#lastname:focus {
+  outline: none;
+    outline: none;
+    border: 2px solid rgb(28, 195, 91)
+}
+
+#lastname:focus + label {
+    bottom: 100%;
+    padding: 0.2em;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(28, 195, 91);
+}
+
+#lastname:valid + label {
+    bottom: 100%;
+    padding: 0.2em;
+          bottom: 100%;
+          padding: 0.2em;
+          font-weight: bold;
 }
 
 #email {
-    width: 85%;
+    width: 100%;
     max-width: 100%;
-    padding: 3% 2%;
-    float: right;
+    padding: 1.5%;
     font-size: 1em;
     font-weight: bold;
-    border: none;
+    border: 2px solid rgb(220, 220, 220);
     font-family: 'Quicksand', sans-serif;
 }
 
 .email-num-wrap {
-    float: left;
+    position: relative;
     width: 100%;
-    height: auto;
-    border: 1px solid rgb(220, 220, 220);
+    margin-top: 3%;
 }
 
-.awesome-icon {
-    width: 15%;
-    max-width: 100%;
-    float: left;
-    text-align: center;
-    background-color: rgb(240, 240, 240);
-    border: none;
-    padding: 3.1% 2%;
+.email-num-wrap > label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.5em;
+    transition: bottom 0.3s ease;
 }
 
-.email-icon, .mobile-icon {
-    font-size: 1.3em;
+#email:focus + label {
+      bottom: 100%;
+      padding: 0.2em;
+      color: white;
+      font-weight: bold;
+      background-color: rgb(28, 195, 91);
+}
+
+#email:valid + label {
+      bottom: 100%;
+      padding: 0.2em;
+      bottom: 100%;
+      padding: 0.2em;
+      font-weight: bold;
+}
+
+#email:focus {
+        outline: none;
+        border: 2px solid rgb(28, 195, 91)
 }
 
 #number {
-    width: 85%;
+    width: 100%;
     max-width: 100%;
-    padding: 3% 2%;
-    float: right;
+    padding: 1.5%;
     font-size: 1em;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    border: none;
+    border: 2px solid rgb(220, 220, 220);
+}
+
+#number:focus + label {
+      bottom: 100%;
+      padding: 0.2em;
+      color: white;
+      font-weight: bold;
+      background-color: rgb(28, 195, 91);
+}
+
+#number:valid + label {
+      bottom: 100%;
+      padding: 0.2em;
+      font-weight: bold;
+}
+
+#number:focus {
+  outline: none;
+        outline: none;
+        border: 2px solid rgb(28, 195, 91)
 }
 
 .clear {
@@ -162,29 +245,26 @@ label {
     padding: 5%;
     text-decoration: none;
     color: white;
-    background: rgb(28, 195, 91);
-    color: white;
     margin-top: 2%;
-    font-size: 1.1em;
+    font-size: 1em;
+    background: rgb(28, 195, 91);
     border: 3px solid rgb(28, 150, 91);
     border-radius: 0.3em;
     font-weight: bolder;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 
 /*OTP html styles*/
 
 #wrapper-otp {
-    max-width: 30%;
+    max-width: 40%;
     margin: 5% auto;
     position: relative;
     background-color: rgb(250, 250, 250);
     border: 1px solid rgb(220, 220, 220);
     box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
-    padding: 2%;
+    padding: 0 2%;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -236,7 +316,7 @@ label {
     margin: 5% auto;
     position: relative;
     background-color: rgb(250, 250, 250);
-    border: 1px solid rgb(220, 220, 220);
+    border: 2px solid rgb(220, 220, 220);
     box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
     color: rgb(100, 100, 100);
     padding: 2%;
@@ -251,17 +331,32 @@ label {
 }
 
 .passWd {
-    padding: 3% 2%;
-    margin-top: 1%;
+    padding: 1.5%;
     font-size: 1em;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    border: 1px solid rgb(220, 220, 220);
-    width: 50%;
+    border: 2px solid rgb(220, 220, 220);
+    width: 100%;
+    max-width: 100%;
 }
 
 .passWd:focus {
-    outline-color: rgb(28, 200, 91);
+    outline: none;
+    border-color: rgb(28, 195, 91);
+}
+
+.passWd:focus + label {
+        bottom: 100%;
+        padding: 0.2em;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(28, 195, 91);
+}
+
+.passWd:valid + label {
+        bottom: 100%;
+        padding: 0.2em;
+        font-weight: bold;
 }
 
 #showPswd {
@@ -269,9 +364,10 @@ label {
 }
 
 .changePswd {
-    padding: 3% 2%;
-    width: 50%;
-    margin-top: 2%;
+    padding: 3%;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 3%;
     background: rgb(28, 195, 91);
     border: 3px solid rgb(28, 150, 91);
     color: white;
@@ -281,28 +377,47 @@ label {
     font-weight: bold;
 }
 
-.new {
-    margin-top: 2%;
-    margin-bottom: 3%;
+.new, .confirm {
+    margin-top: 5%;
+    position: relative;
+    height: auto;
 }
 
 .confirm {
-    margin-top: 3%;
+  margin-bottom: 5%;
+  margin-top: 8%;
 }
 
-#showPswd-text {
-    max-width: 30%;
-    display: inline-block;
-    font-size: 0.8em;
+.new > label, .confirm > label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 0.5em;
+      transition: bottom 0.3s ease;
+}
+
+#showPswd {
+  margin: 0;
+}
+
+.showpassword {
+  display: block;
+  max-width: 100%;
+  margin-top: 2%;
+}
+
+.showpassword > span {
+  font-size: 0.8em;
+  width: 100%;
+  margin-left: 1%;
 }
 
 
 /*Identity CSS*/
 
 #wrapper-identity {
-    max-width: 30%;
+    max-width: 35%;
     margin: 5% auto;
-    position: relative;
     background-color: rgb(248, 248, 248);
     border: 1px solid rgb(220, 220, 220);
     color: rgb(100, 100, 100);
@@ -311,7 +426,7 @@ label {
     box-shadow: 1px 1px 5px rgb(248, 248, 248), -1px -1px 5px rgb(248, 248, 248);
 }
 
-#wrapper-identity>p {
+#wrapper-identity > #descript {
     margin-top: 0;
     padding-bottom: 7%;
     font-family: 'Quicksand', sans-serif;
@@ -320,28 +435,53 @@ label {
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-.aadhar-wrap {
+.aadhar-wrap, .pan-wrap {
+    position: relative;
     max-width: 100%;
-    margin-top: 5%;
+    margin-top: 12%;
 }
 
 .pan-wrap {
-    max-width: 100%;
-    margin-top: 5%;
+  margin-bottom: 5%;
 }
+
+.aadhar-wrap > label, .pan-wrap > label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0.5em;
+        transition: bottom 0.3s ease;
+}
+
 
 #aadharN, #panN {
     width: 100%;
-    margin-top: 2%;
-    padding: 4% 2%;
-    border: 1px solid rgb(220, 220, 220);
+    max-width: 100%;
+    display: inline-block;
+    padding: 2%;
+    border: 2px solid rgb(220, 220, 220);
     font-family: 'Quicksand', sans-serif;
     font-size: 1em;
     font-weight: bold;
 }
 
 #aadharN:focus, #panN:focus {
-    outline-color: rgb(28, 195, 91);
+    outline: none;
+    border-color: rgb(28, 195, 91);
+}
+
+#aadharN:focus + label, #panN:focus + label {
+          bottom: 100%;
+          padding: 0.2em;
+          color: white;
+          font-weight: bold;
+          background-color: rgb(28, 195, 91);
+}
+
+#aadharN:valid + label, #panN:valid + label {
+          bottom: 100%;
+          padding: 0.2em;
+          font-weight: bold;
 }
 
 #submit {
@@ -352,10 +492,11 @@ label {
     border: 3px solid rgb(28, 150, 91);
     border-radius: 0.3em;
     color: white;
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 }
+
 
 #last {
     max-width: 40%;
@@ -436,21 +577,30 @@ label {
     }
 }
 
-@media only screen and (max-width: 785px) {
+@media only screen and (max-width: 820px) {
     #wrapper-otp {
         max-width: 60%;
     }
     #wrapper-password {
-        max-width: 70%;
+        max-width: 60%;
+    }
+    .new > label, .confirm > label {
+      font-size: 0.9em;
     }
 }
 
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 520px) {
     #wrapper-otp {
         max-width: 80%;
     }
     #wrapper-password {
         max-width: 80%;
+    }
+    .new, .confirm {
+      margin-top: 10%;
+    }
+    .new > label, .confirm > label {
+      font-size: 0.9em;
     }
 }
 
@@ -467,8 +617,17 @@ label {
     #wrapper-signup, #last {
         max-width: 55%;
     }
+
+    .name-wrap > label, .email-num-wrap > label {
+      font-size: 0.9em;
+    }
+
     #wrapper-identity {
         max-width: 45%;
+    }
+
+    .aadhar-wrap > label, .pan-wrap > label {
+      font-size: 0.9em;
     }
 }
 
