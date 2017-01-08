@@ -9,21 +9,32 @@
           <div class="name-wrap">
             <input type="text" ng-model="newuser.lastname" name="lastname" id="lastname" value="" required><label for="lastname">Last Name</label>
           </div>
-          <p class="error" style="width: 45%; color: red; font-size: 0.8em; clear: both; margin-bottom: 0; padding-bottom: 0;" ng-show="signForm.firstname.$dirty && !newuser.firstname">Firstname required</p>
-          <p class="error" style="width: 45%; color: red; font-size: 0.8em; clear: both; margin-bottom: 0; padding-bottom: 0;" ng-show="signForm.lastname.$dirty && !newuser.lastname">Lastname required</p>
-        </label><br>
+          <div ng-messages="signForm.firstname.$error" ng-if="signForm.firstname.$touched">
+            <p ng-message="required" class="error">First name is required</p>
+          </div>
+          <div ng-messages="signForm.lastname.$error" ng-if="signForm.lastname.$touched">
+            <p ng-message="required" class="error">Last name is required</p>
+          </div>
       </div>
       <div class="element-wrap">
             <div class="email-num-wrap">
               <input type="email" id="email" ng-model="newuser.email" name="email" value="" required><label for="email">EMAIL</label>
             </div>
-            <p class="error" style="color: red; font-size: 0.8em;" ng-show="signForm.email.$invalid && signForm.email.$dirty">Enter a valid email</p>
+            <!-- <p class="error" style="color: red; font-size: 0.8em;" ng-show="signForm.email.$invalid && signForm.email.$dirty">Enter a valid email</p> -->
+            <div class="" ng-messages="signForm.email.$error" ng-if="signForm.email.$touched">
+              <p ng-message="required" class="error">Email is required.</p>
+              <p ng-message="email" class="error">Please enter a valid email.</p>
+            </div>
       </div>
       <div class="element-wrap">
           <div class="email-num-wrap">
             <input type="number" id="number" ng-model="newuser.number" name="mobile" ng-minlength="10" ng-maxlength ="10" value="" required><label for="number">Mobile number</label>
           </div>
-          <p class="error" style="color: red; font-size: 0.8em;" ng-show="((signForm.mobile.$error.minlength || signForm.mobile.$error.maxlength) && signForm.mobile.$dirty)">Please enter a 10 digit number</p>
+          <div class="" ng-messages="signForm.mobile.$error" ng-if="signForm.mobile.$touched">
+            <p ng-message="required" class="error">Enter a 10 digit number</p>
+            <p ng-message="minlength" class="error">Number is too small</p>
+            <p ng-message="maxlength" class="error">Number is too big</p>
+          </div>
       </div>
       <div class="clear">
         &nbsp;
