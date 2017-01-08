@@ -1,4 +1,4 @@
-var app = angular.module("Signup", ['ui.router', "ngAnimate"]);
+var app = angular.module("Signup", ['ui.router', "ngAnimate", "ngMessages"]);
 
 app.config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.otherwise('/index/signup');
