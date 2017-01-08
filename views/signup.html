@@ -31,9 +31,9 @@
             <input type="number" id="number" ng-model="newuser.number" name="mobile" ng-minlength="10" ng-maxlength ="10" value="" required><label for="number">Mobile number</label>
           </div>
           <div class="" ng-messages="signForm.mobile.$error" ng-if="signForm.mobile.$touched">
-            <p ng-message="required" class="error">Enter a 10 digit number</p>
             <p ng-message="minlength" class="error">Number is too small</p>
             <p ng-message="maxlength" class="error">Number is too big</p>
+            <p ng-message="required" class="error">Enter a 10 digit number</p>
           </div>
       </div>
       <div class="clear">

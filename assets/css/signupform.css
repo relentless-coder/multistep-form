@@ -17,6 +17,7 @@ body {
 .error {
   color: red;
   font-size: 0.8em;
+  margin: 0;
 }
 
 /*Signup form styles*/
